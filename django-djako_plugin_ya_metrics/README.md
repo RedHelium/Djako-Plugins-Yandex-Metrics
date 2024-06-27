@@ -7,16 +7,22 @@
 ## Быстрый старт
 -----------
 
-1. Добавьте "djako_plugin_ya_metrics" в INSTALLED_APPS::
+0. Укажите в переменных окружения (enviroments) переменную `YANDEX_ACCESS_TOKEN`, который вы должны получить, следуя инструкции API Яндекс метрики. 
 
+1. Добавьте "djako_plugin_ya_metrics" в `INSTALLED_APPS`:
+
+```
     INSTALLED_APPS = [
         ...,
         "djako_plugin_ya_metrics",
     ]
+```
 
-2. Добавьте маршруты плагина в urls.py проекта::
+2. Добавьте маршруты плагина в urls.py проекта:
 
+```
     path("", include("djako_plugin_ya_metrics.urls")),
+```
 
 3. Запустите ``python manage.py migrate`` для создания моделей.
 

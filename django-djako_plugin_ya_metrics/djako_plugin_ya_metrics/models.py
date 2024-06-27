@@ -20,6 +20,9 @@ class YandexMetrikaCounter(models.Model):
 
 class YandexMetrikaWidgetStyle(models.Model):
 
+    chart_type = models.CharField(
+        verbose_name="Тип диаграммы", max_length=32, default="line"
+    )
     header = models.CharField(verbose_name="Заголовок", max_length=64)
     border_width = models.IntegerField(verbose_name="Толщина границы", default=1)
     fill = models.CharField(verbose_name="Тип заливки", max_length=10)
@@ -70,6 +73,8 @@ class YandexMetrikaCounterWidget(models.Model):
         verbose_name="Группировки",
         max_length=150,
         help_text="Можно указать до 10 группировок в запросе. Синтаксис описан в документации Яндекс",
+        blank=True,
+        null=True,
     )
     limit = models.IntegerField(
         verbose_name="Макс. лимит на кол-во возвращаемых строк", default=100
@@ -82,6 +87,9 @@ class YandexMetrikaCounterWidget(models.Model):
         null=True,
     )
     ordering = models.IntegerField(verbose_name="Приоритет отображения", default=0)
+    hidden = models.BooleanField(
+        verbose_name="Скрыть виджет в панели администратора", default=False
+    )
 
     def __str__(self):
         return self.header

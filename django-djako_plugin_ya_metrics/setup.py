@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name="djako_plugin_ya_metrics",
-    version="1.0.0",
+    version="0.0.5",
     author="Brilev Denis",
     author_email="brilevdv@digitaleden.ru",
     description="Плагин для Djako, который предоставляет интеграцию с API Яндекс метрики и визуализирует счётчики через Chart.js",
@@ -22,7 +22,7 @@ setup(
         "Framework :: Django",
         "Framework :: Django :: 5.0",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: BSD License",
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
