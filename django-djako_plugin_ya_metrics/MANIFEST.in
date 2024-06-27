@@ -1,0 +1,5 @@
+include LICENSE
+include README.md
+recursive-include djako_plugin_ya_metrics/static *
+recursive-include djako_plugin_ya_metrics/templates *
+recursive-include docs *
